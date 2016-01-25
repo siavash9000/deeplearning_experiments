@@ -5,7 +5,7 @@ max_vocabulary_size = 9000
 unknown_token = "UNKNOWN_TOKEN"
 sentence_start_token = "SENTENCE_START"
 sentence_end_token = "SENTENCE_END"
-input_file = 'emma.txt'
+input_file = '../data/emma.txt'
 
 def create_train_data():
     #print "tokenizing raw data"
@@ -40,4 +40,4 @@ def create_train_data():
     #print "------------------------------------------------------------------------------------------------------------"
 
     vocabulary_size = len(vocab)
-    return X_train,y_train, vocabulary_size
+    return X_train,y_train, vocabulary_size, index_to_word, word_to_index
